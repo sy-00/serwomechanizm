@@ -6,16 +6,14 @@ int main ()
 {
 	KeyboardInit();
 	ServoInit(67);
-//	ServoGoTo(24);			--> Zadanie 2
-//	ServoGoTo(12);
-	
+
 	while(1)
 	{
 		
 		switch(eKeyboardRead())
 		{
 			case BUTTON_0:
-				ServoCallib();
+				ServoCallib(6); //do argyumentu teraz dajemy offset (zamiast nic)
 				break;
 			case BUTTON_1:
 				ServoGoTo(12);
