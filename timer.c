@@ -24,7 +24,7 @@ void WaitOnTimer0(unsigned int uiTime)
 	T0TCR |= TIMER_RESET;
 	T0TCR = TIMER_ENABLE;
 	
-	while(T0TC != (uiTime *15))
+	while(T0TC != (uiTime *15)) 
 	{
 		
 	}
