@@ -1,7 +1,6 @@
 #include "keyboard.h"
 #include "servo.h"
 
-
 int main ()
 {
 	KeyboardInit();
@@ -9,11 +8,13 @@ int main ()
 	
 	while(1)
 	{
-		
 		switch(eKeyboardRead())
 		{
 			case BUTTON_0:
 				ServoCallib();
+				break;
+			case RELASED:
+				break;
 		}
 	}
 }
