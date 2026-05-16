@@ -55,11 +55,14 @@ void ServoInit(unsigned int uiServoFrequency)
 {
 	LedInit();
 	DetectorInit();
-	
-	sServo.eState = CALLIB;
-	
+	sServo.eState = IDLE;
 	Timer0Interrupts_Init(1000000/uiServoFrequency, &Automat);
-	
-	while(sServo.eState != IDLE)
-	{ }
+}
+
+void ServoCallib(void)
+{
+	sServo.eState = CALLIB;
+	while(sServo.eState == CALLIB)
+	{  
+	}	
 }
