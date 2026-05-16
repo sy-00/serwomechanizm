@@ -5,7 +5,7 @@
 int main ()
 {
 	KeyboardInit();
-	ServoInit(20);
+	ServoInit(67);
 //	ServoGoTo(24);			--> Zadanie 2
 //	ServoGoTo(12);
 	
