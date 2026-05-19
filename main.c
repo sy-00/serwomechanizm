@@ -5,9 +5,13 @@
 int main ()
 {
 	KeyboardInit();
-	ServoInit(67);
-//	ServoGoTo(24);			--> Zadanie 2
-//	ServoGoTo(12);
+	ServoInit(20);
+  	ServoCallib();
+	ServoWait();
+	ServoGoTo(24);
+	ServoWait();
+	ServoGoTo(12);
+
 	
 	while(1)
 	{
@@ -24,7 +28,7 @@ int main ()
 				ServoGoTo(24);
 				break;
 			case BUTTON_3:
-				ServoGoTo(36);
+				ServoWait();
 				break;
 			case RELASED:
 				break;
